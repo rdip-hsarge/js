@@ -1,0 +1,20 @@
+var numbers = [];
+var simple = [2];
+var flag = 0;
+
+for (var i = 2; i<100; i++){
+	numbers.push(i);  
+}
+
+for (let val of numbers){
+    for (let div of simple){ // Если хоть раз поделится - чисто составное (в список не попадет)
+        if (val % div == 0){
+            flag = 1;
+        }
+    }
+    console.log(simple);
+    if (flag == 0){
+        simple.push(val);
+    }
+    flag = 0;
+}
