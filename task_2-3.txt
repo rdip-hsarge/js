@@ -1,0 +1,29 @@
+var basket = [];
+var Name, Price;
+
+while (true){
+    Name = prompt('Enter the product name (or nothing to get out): ');
+    if (!Name){
+    	break;
+    }
+  	Price = prompt('Enter its price: ');
+  if (!isNumber(Price)){
+    alert("It's not a number");
+    break;
+  }
+  basket.push([Name, Price]);
+}
+console.log(countBasketPrice(basket));
+
+
+function isNumber(value){
+	return value == +value;  
+}
+
+function countBasketPrice(array){
+	var result = 0;
+  	for (let productInfo of array){
+      result += +productInfo[1];
+    }
+  return result;
+}
