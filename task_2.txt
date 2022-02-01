@@ -1,0 +1,14 @@
+let basket = {
+	result: 0,
+  	counter: 0,
+};
+
+while(true){
+  let productName = prompt('Enter the product name (or nothing to exit): ');
+  if (!productName)
+    break;
+  let price = prompt('Enter the product price: ');
+  basket.counter ++;
+  basket.result += +price;
+  basket.productName = price;
+}
