@@ -1,0 +1,15 @@
+let number = prompt('Enter a number(0...999): ');
+let obj={};
+
+
+if (number > 999){
+  	return console.log('Too big number ' + obj);
+  }
+obj["сотни"] = Math.floor(number / 100);
+obj["десятки"] = Math.floor((number % 100) / 10);
+obj["единицы"] = number % 10;
+
+for (key in obj){
+ console.log(key + ': ' + obj[key]); 
+}
+ 
